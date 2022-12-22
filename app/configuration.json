@@ -1,0 +1,16 @@
+{
+    "className": "EditDecision",
+    "fileName": "editDecision.ts",
+    "fields": 
+    [
+        {
+            "name": "name"
+        },
+        {
+            "name": "address"
+        },
+        {
+            "name": "type of decision"
+        }
+    ]
+}
