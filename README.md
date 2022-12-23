@@ -8,7 +8,7 @@ Generates fluent page object models based of field names provided in the configu
 - Frameworks
     - Cypress
 
-Lanugages
+- Lanugages
     - Typescript
 
 ## Instructions
