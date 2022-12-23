@@ -1,16 +1,13 @@
 {
-    "className": "EditDecision",
-    "fileName": "editDecision.ts",
+    "className": "PersonPage",
+    "fileName": "personPage.ts",
     "fields": 
     [
         {
             "name": "name"
         },
         {
-            "name": "address"
-        },
-        {
-            "name": "type of decision"
+            "name": "first address line"
         }
     ]
 }
