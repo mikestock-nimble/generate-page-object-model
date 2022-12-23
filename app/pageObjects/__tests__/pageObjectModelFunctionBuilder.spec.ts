@@ -18,7 +18,7 @@ describe("Testing the page object model function builder", () =>
 
             expect(result.name).toBe("withName");
             expect(result.log).toBe("Logger.Log(`With name ${value}`)");
-            expect(result.command).toBe("cy.getByTestId('not-an-element')");
+            expect(result.command).toBe("cy.getByTestId(`not-an-element`)");
         });
 
         it("Should build the function definition correctly with multiple words", () =>
@@ -35,7 +35,7 @@ describe("Testing the page object model function builder", () =>
 
             expect(result.name).toBe("hasFirstAddressLine");
             expect(result.log).toBe("Logger.Log(`Has first address line ${value}`)");
-            expect(result.command).toBe("cy.getByTestId('not-an-element')");
+            expect(result.command).toBe("cy.getByTestId(`not-an-element`)");
         });
     });
 });

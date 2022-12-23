@@ -12,12 +12,12 @@ describe("Tests converting a page object definition into a typescript class", ()
                 {
                     name: "withName",
                     log: "Logger.Log(`with name ${value}`",
-                    command: "cy.getByTestId('not-an-element')"
+                    command: "cy.getByTestId(`not-an-element`)"
                 },
                 {
                     name: "hasName",
                     log: "Logger.Log(`has name ${value}`)",
-                    command: "cy.getByTestId('not-an-element')"
+                    command: "cy.getByTestId(`not-an-element`)"
                 }
             ]
         }
@@ -29,15 +29,21 @@ describe("Tests converting a page object definition into a typescript class", ()
                 "public withName(value: string): this",
                 "{",
                     "Logger.Log(`with name ${value}`;",
-                    "cy.getByTestId('not-an-element');",
+                    "",
+                    "cy.getByTestId(`not-an-element`);",
+                    "",
                     "return this;",
                 "}",
+                "",
                 "public hasName(value: string): this",
                 "{",
                     "Logger.Log(`has name ${value}`);",
-                    "cy.getByTestId('not-an-element');",
+                    "",
+                    "cy.getByTestId(`not-an-element`);",
+                    "",
                     "return this;",
                 "}",
+                "",
             "}"
         ];
 
