@@ -37,6 +37,8 @@ To run:
 
 Format the file in your favourite editor
 
+The pages have been set to target elements that do not exist, to try and avoid false positives by accident, you will have to insert your specific id for it to work
+
 Outputs in the following:
 
 ```
