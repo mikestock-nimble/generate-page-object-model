@@ -11,7 +11,7 @@ export class PageObjectModelFunctionBuilder implements IPageObjectModelFunctionB
         const result: PageObjectModelFunction =
         {
             name: `${params.prefix}${this.buildName(nameTokens)}`,
-            log: "Logger.Log(\`" + `${this.toTitleCase(params.prefix)} ` + field.name + " ${value}\`" ,
+            log: "Logger.Log(\`" + `${this.toTitleCase(params.prefix)} ` + field.name + " ${value}\`)" ,
             command: "cy.getByTestId('not-an-element')"
         };
 

@@ -28,14 +28,14 @@ describe("Given a configuration with fields", () =>
 
         // With function
         expect(withFunction.name).toBe("withName");
-        expect(withFunction.log).toBe("Logger.Log(`With name ${value}`");
+        expect(withFunction.log).toBe("Logger.Log(`With name ${value}`)");
         expect(withFunction.command).toBe("cy.getByTestId('not-an-element')");
 
         // Has function
         const hasFunction = result.functions[1];
 
         expect(hasFunction.name).toBe("hasName");
-        expect(hasFunction.log).toBe("Logger.Log(`Has name ${value}`");
+        expect(hasFunction.log).toBe("Logger.Log(`Has name ${value}`)");
         expect(hasFunction.command).toBe("cy.getByTestId('not-an-element')");
     });
 });
