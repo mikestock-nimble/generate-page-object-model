@@ -1,8 +1,6 @@
 # generate-page-object-model
 Generates fluent page object models based of field names provided in the configuration
 
-
-
 ## Supports
 
 - Frameworks
@@ -29,10 +27,13 @@ Create a configuration file, example:
     ]
 }
 
+Please note the tool is expecting words to be lower case, separated by a space in the case of multiple, e.g. first address line
+
 ```
 To run:
 
 `yarn install`
+
 `yarn start`
 
 Format the file in your favourite editor
@@ -42,56 +43,38 @@ The pages have been set to target elements that do not exist, to try and avoid f
 Outputs in the following:
 
 ```
-export class LiftNtiPage
+export class PersonPage
 {
-public withSubmissionDecisionId(value: string): this
+public withName(value: string): this
 {
-Logger.Log(`With submission decision id ${value}`);
+Logger.Log(`With name ${value}`);
 
 cy.getByTestId(`not-an-element`);
 
 return this;
 }
 
-public withDateLifted(value: string): this
+public withFirstAddressLine(value: string): this
 {
-Logger.Log(`With date lifted ${value}`);
+Logger.Log(`With first address line ${value}`);
 
 cy.getByTestId(`not-an-element`);
 
 return this;
 }
 
-public withNotes(value: string): this
+public hasName(value: string): this
 {
-Logger.Log(`With notes ${value}`);
+Logger.Log(`Has name ${value}`);
 
 cy.getByTestId(`not-an-element`);
 
 return this;
 }
 
-public hasSubmissionDecisionId(value: string): this
+public hasFirstAddressLine(value: string): this
 {
-Logger.Log(`Has submission decision id ${value}`);
-
-cy.getByTestId(`not-an-element`);
-
-return this;
-}
-
-public hasDateLifted(value: string): this
-{
-Logger.Log(`Has date lifted ${value}`);
-
-cy.getByTestId(`not-an-element`);
-
-return this;
-}
-
-public hasNotes(value: string): this
-{
-Logger.Log(`Has notes ${value}`);
+Logger.Log(`Has first address line ${value}`);
 
 cy.getByTestId(`not-an-element`);
 
