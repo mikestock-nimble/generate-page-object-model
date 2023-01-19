@@ -15,11 +15,12 @@ describe("Given a configuration with fields", () =>
                 {
                     name: "name"
                 }
-            ]
+            ],
+            prefix: "with"
         };
 
         const result = builder.build(configuration);
-        expect(result.functions.length).toBe(2);
+        expect(result.functions.length).toBe(1);
 
         expect(result.className).toBe("EditDecision");
         expect(result.fileName).toBe("editDecision");
@@ -30,13 +31,6 @@ describe("Given a configuration with fields", () =>
         expect(withFunction.name).toBe("withName");
         expect(withFunction.log).toBe("Logger.Log(`With name ${value}`)");
         expect(withFunction.command).toBe("cy.getByTestId(`not-an-element`)");
-
-        // Has function
-        const hasFunction = result.functions[1];
-
-        expect(hasFunction.name).toBe("hasName");
-        expect(hasFunction.log).toBe("Logger.Log(`Has name ${value}`)");
-        expect(hasFunction.command).toBe("cy.getByTestId(`not-an-element`)");
     });
 });
 

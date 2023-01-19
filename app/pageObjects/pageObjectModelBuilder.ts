@@ -16,20 +16,15 @@ export class PageObjectModelBuilder
             functions: []
         };
 
-        const withMethods: Array<PageObjectModelFunction> = [];
-        const hasMethods: Array<PageObjectModelFunction> = [];
+        const functions: Array<PageObjectModelFunction> = [];
 
         configuration.fields.forEach(field =>
         {
-            const withMethod = this.pageObjectFunctionModelBuilder.build({ field: field, prefix: 'with'});
-            withMethods.push(withMethod);
-
-            const hasMethod = this.pageObjectFunctionModelBuilder.build({ field: field, prefix: "has" });
-            hasMethods.push(hasMethod);
+            const createdFunction = this.pageObjectFunctionModelBuilder.build({ field: field, prefix: configuration.prefix});
+            functions.push(createdFunction);
         })
 
-        result.functions.push(...withMethods);
-        result.functions.push(...hasMethods);
+        result.functions.push(...functions);
 
         return result;
     }

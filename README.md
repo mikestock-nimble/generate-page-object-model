@@ -24,7 +24,8 @@ Create a configuration file, example:
         {
             "name": "first address line"
         }
-    ]
+    ],
+    "prefix": "with"
 }
 
 Please note the tool is expecting words to be lower case, separated by a space in the case of multiple, e.g. first address line
@@ -57,24 +58,6 @@ return this;
 public withFirstAddressLine(value: string): this
 {
 Logger.Log(`With first address line ${value}`);
-
-cy.getByTestId(`not-an-element`);
-
-return this;
-}
-
-public hasName(value: string): this
-{
-Logger.Log(`Has name ${value}`);
-
-cy.getByTestId(`not-an-element`);
-
-return this;
-}
-
-public hasFirstAddressLine(value: string): this
-{
-Logger.Log(`Has first address line ${value}`);
 
 cy.getByTestId(`not-an-element`);
 

@@ -3,6 +3,7 @@ export type Configuration =
     className: string;
     fileName: string;
     fields: Array<FieldConfiguration>;
+    prefix: string;
 }
 
 export type FieldConfiguration =

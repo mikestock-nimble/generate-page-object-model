@@ -15,8 +15,8 @@ describe("Tests converting a page object definition into a typescript class", ()
                     command: "cy.getByTestId(`not-an-element`)"
                 },
                 {
-                    name: "hasName",
-                    log: "Logger.Log(`has name ${value}`)",
+                    name: "withAddress",
+                    log: "Logger.Log(`with address ${value}`)",
                     command: "cy.getByTestId(`not-an-element`)"
                 }
             ]
@@ -35,9 +35,9 @@ describe("Tests converting a page object definition into a typescript class", ()
                     "return this;",
                 "}",
                 "",
-                "public hasName(value: string): this",
+                "public withAddress(value: string): this",
                 "{",
-                    "Logger.Log(`has name ${value}`);",
+                    "Logger.Log(`with address ${value}`);",
                     "",
                     "cy.getByTestId(`not-an-element`);",
                     "",
