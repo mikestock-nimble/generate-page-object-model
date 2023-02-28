@@ -30,7 +30,7 @@ describe("Given a configuration with fields", () =>
         // With function
         expect(withFunction.name).toBe("withName");
         expect(withFunction.log).toBe("Logger.Log(`With name ${value}`)");
-        expect(withFunction.command).toBe("cy.getByTestId(`not-an-element`)");
+        expect(withFunction.command).toBe("cy.getByTestId(`not-an-element`).should(`contain.text`, `not-exist`)");
     });
 });
 

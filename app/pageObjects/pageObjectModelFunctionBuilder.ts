@@ -12,7 +12,7 @@ export class PageObjectModelFunctionBuilder implements IPageObjectModelFunctionB
         {
             name: `${params.prefix}${this.buildName(nameTokens)}`,
             log: "Logger.Log(\`" + `${this.toTitleCase(params.prefix)} ` + field.name + " ${value}\`)" ,
-            command: "cy.getByTestId(`not-an-element`)"
+            command: "cy.getByTestId(`not-an-element`).should(`contain.text`, `not-exist`)"
         };
 
         return result;
